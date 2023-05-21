@@ -1,4 +1,4 @@
-# Guía 13
+# Guía 14
 ## Implementación de las diapositivas
 
 En la siguiente carpeta se encuentra la implementación del código suministrado en la clase:
