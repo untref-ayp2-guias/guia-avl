@@ -58,6 +58,14 @@ func (n *AVLNode[T]) getBalance() int {
 	return n.left.getHeight() - n.right.getHeight()
 }
 
+// Actualiza la altura del nodo
+func (n *AVLNode[T]) updateHeight() {
+	if n == nil {
+		return
+	}
+	n.height = max(n.left.getHeight(), n.right.getHeight()) + 1
+}
+
 // Inserta un elemento en el árbol AVL
 // Si el elemento ya existe, no hace nada
 // Si el elemento no existe, lo inserta y reestructura el árbol si es necesario
@@ -75,7 +83,7 @@ func (n *AVLNode[T]) insert(value T) *AVLNode[T] {
 		return n
 	}
 	// Actualiza la altura del nodo
-	n.height = 1 + max(n.left.getHeight(), n.right.getHeight())
+	n.updateHeight()
 	// Calcula el balance del nodo
 	balance := n.getBalance() // Si el balance es mayor a 1, el árbol está desbalanceado
 
@@ -118,8 +126,8 @@ func (n *AVLNode[T]) rotateRight() *AVLNode[T] {
 	n.left = t2
 
 	// Actualizamos las alturas
-	n.height = max(n.left.getHeight(), n.right.getHeight()) + 1
-	y.height = max(y.left.getHeight(), y.right.getHeight()) + 1
+	n.updateHeight()
+	y.updateHeight()
 
 	return y
 }
@@ -134,8 +142,8 @@ func (n *AVLNode[T]) rotateLeft() *AVLNode[T] {
 	n.right = t2
 
 	// Actualizamos las alturas
-	n.height = max(n.left.getHeight(), n.right.getHeight()) + 1
-	x.height = max(x.left.getHeight(), x.right.getHeight()) + 1
+	n.updateHeight()
+	x.updateHeight()
 
 	return x
 }
@@ -166,7 +174,7 @@ func (n *AVLNode[T]) remove(value T) *AVLNode[T] {
 	}
 
 	// Actualiza la altura del nodo
-	n.height = max(n.left.getHeight(), n.right.getHeight()) + 1
+	n.updateHeight()
 	// Calcula el balance del nodo
 	balance := n.getBalance()
 
