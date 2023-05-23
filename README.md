@@ -10,7 +10,7 @@ En la siguiente carpeta se encuentra la implementación del código suministrado
 ## Ejercicios
 
 ### Ejercicio 1
-En lápiz y papel dibujar cada paso. Crear un árbol AVL vacío e insertar: 10 ,50, 30, 40, 9, 8, 11, 12, 13, 14, 15. Indicando a cada paso si se realizan rotaciones. Comparar los resultados obtenidos modificando el main
+En lápiz y papel dibujar cada paso. Crear un árbol AVL vacío e insertar: 10, 50, 30, 40, 9, 8, 11, 12, 13, 14, 15. Indicando a cada paso si se realizan rotaciones. Comparar los resultados obtenidos modificando el main
 
 ### Ejercicio 2
 Escribir un iterador PreOrder.
