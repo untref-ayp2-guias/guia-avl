@@ -17,5 +17,5 @@ Escribir un iterador PreOrder.
 > Pista: Al crear el iterador apilar la raiz
 > Al devolver el siguiente desapilar y devolver el elemento del tope. Si ese nodo tiene hijo izquierdo apilarlo y si tiene hijo derecho apilarlo
 
-
-
+### Ejercicio 3
+Escribir un iterador PosOrder.
