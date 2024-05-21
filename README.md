@@ -1,12 +1,4 @@
-# Guía 14
-## Implementación de las diapositivas
-
-En la siguiente carpeta se encuentra la implementación del código suministrado en la clase:
-
-- `/avltree` código del árbol AVL, el nodo AVL y los iteradores
-- `/stack`, código de una pila sobre slices (se usa para implementar el iterador InOrder)
-- `/queue`, código de una cola sobre slices (se usa para implementar un iterador por niveles)
-
+# Guía Árboles AVL
 ## Ejercicios
 
 ### Ejercicio 1
