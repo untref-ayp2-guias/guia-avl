@@ -1,5 +1,14 @@
-module guia14
+module guiaAvl
 
 go 1.20
 
-require golang.org/x/exp v0.0.0-20230519143937-03e91628a987
+require (
+	github.com/stretchr/testify v1.9.0
+	github.com/untref-ayp2/data-structures v0.11.4
+)
+
+require (
+	github.com/davecgh/go-spew v1.1.1 // indirect
+	github.com/pmezard/go-difflib v1.0.0 // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
+)
