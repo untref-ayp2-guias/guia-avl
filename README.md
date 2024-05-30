@@ -22,8 +22,10 @@ Escribir un iterador PreOrder.
 Escribir un iterador PosOrder.
 
 ### Ejercicio 6
-Urilizando como estructura auxiliar un árbol AVL, inplementar el TAD TreeSet
+Utilizando como estructura auxiliar un árbol AVL, inplementar el TAD TreeSet
 
 ### Ejercicio 7
-Urilizando como estructura auxiliar un árbol AVL, inplementar el TAD PQueue de máxima prioridad
+Utilizando como estructura auxiliar un árbol AVL, inplementar el TAD PQueue de máxima prioridad
 
+### Ejercicio 8
+Utilizando como estructura auxiliar un árbol AVL, inplementar el algoritmo de ordenamiento AVLTreeSort. Analizar la complejidad computacional. ¿Le parece un algoritmo eficiente? ¿Por qué?
