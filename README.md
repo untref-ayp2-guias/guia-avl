@@ -21,3 +21,9 @@ Escribir un iterador PreOrder.
 ### Ejercicio 5
 Escribir un iterador PosOrder.
 
+### Ejercicio 6
+Urilizando como estructura auxiliar un árbol AVL, inplementar el TAD TreeSet
+
+### Ejercicio 7
+Urilizando como estructura auxiliar un árbol AVL, inplementar el TAD PQueue de máxima prioridad
+
