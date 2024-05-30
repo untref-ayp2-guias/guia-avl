@@ -1,4 +1,4 @@
-package guiaAvl
+package avl
 
 import (
 	"errors"
@@ -23,7 +23,7 @@ func NewAVLInOrderIterator[T types.Ordered](root *AVLNode[T]) *AVLInOrderIterato
 func (it *AVLInOrderIterator[T]) stackLeftChildren(node *AVLNode[T]) {
 	for node != nil {
 		it.stack.Push(*node)
-		node = node.getLeft()
+		node = node.GetLeft()
 	}
 }
 
@@ -37,8 +37,8 @@ func (it *AVLInOrderIterator[T]) Next() (T, error) {
 		return data, errors.New("no hay más elementos")
 	}
 	next, _ := it.stack.Pop()
-	if next.getRight() != nil {
-		it.stackLeftChildren(next.getRight())
+	if next.GetRight() != nil {
+		it.stackLeftChildren(next.GetRight())
 	}
 	return next.data, nil
 }

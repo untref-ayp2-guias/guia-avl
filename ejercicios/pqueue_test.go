@@ -1,4 +1,4 @@
-package guiaAvl
+package ejercicios_avl
 
 import (
 	"testing"

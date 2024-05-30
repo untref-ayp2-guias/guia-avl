@@ -1,20 +1,21 @@
-package guiaAvl
+package ejercicios_avl
 
 import (
+	"guiaAvl/avl"
 	"testing"
 
 	"github.com/stretchr/testify/assert"
 )
 
-func TestAVLPreOrderIteratorVacio(t *testing.T) {
-	avl := NewAVLTree[int]()
-	iterator := NewAVLPreOrderIterator[int](avl.GetRoot())
+func TestAVLPosOrderIteratorVacio(t *testing.T) {
+	avl := avl.NewAVLTree[int]()
+	iterator := NewAVLPosOrderIterator[int](avl.GetRoot())
 
 	assert.False(t, iterator.HasNext())
 }
 
-func TestAVLPreOrderIterator(t *testing.T) {
-	avl := NewAVLTree[int]()
+func TestAVLPosOrderIterator(t *testing.T) {
+	avl := avl.NewAVLTree[int]()
 
 	avl.Insert(4)
 	avl.Insert(2)
@@ -24,9 +25,9 @@ func TestAVLPreOrderIterator(t *testing.T) {
 	avl.Insert(5)
 	avl.Insert(7)
 
-	iterator := NewAVLPreOrderIterator[int](avl.GetRoot())
+	iterator := NewAVLPosOrderIterator[int](avl.GetRoot())
 
-	expected := []int{4, 2, 1, 3, 6, 5, 7}
+	expected := []int{1, 3, 2, 5, 7, 6, 4}
 
 	for _, expVal := range expected {
 		assert.True(t, iterator.HasNext())
@@ -36,14 +37,14 @@ func TestAVLPreOrderIterator(t *testing.T) {
 	assert.False(t, iterator.HasNext())
 }
 
-func TestAVLPreOrderIteratorNextOverflow(t *testing.T) {
-	avl := NewAVLTree[int]()
+func TestAVLPosOrderIteratorNextOverflow(t *testing.T) {
+	avl := avl.NewAVLTree[int]()
 
 	avl.Insert(1)
 	avl.Insert(2)
 	avl.Insert(3)
 
-	iterator := NewAVLPreOrderIterator[int](avl.GetRoot())
+	iterator := NewAVLPosOrderIterator[int](avl.GetRoot())
 
 	_, _ = iterator.Next()
 	_, _ = iterator.Next()

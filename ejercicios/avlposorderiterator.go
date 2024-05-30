@@ -1,13 +1,15 @@
-package guiaAvl
+package ejercicios_avl
 
 import (
+	"guiaAvl/avl"
+
 	"github.com/untref-ayp2/data-structures/types"
 )
 
 type AVLPosOrderIterator[T types.Ordered] struct {
 }
 
-func NewAVLPosOrderIterator[T types.Ordered](root *AVLNode[T]) *AVLPosOrderIterator[T] {
+func NewAVLPosOrderIterator[T types.Ordered](root *avl.AVLNode[T]) *AVLPosOrderIterator[T] {
 	return nil
 }
 

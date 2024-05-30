@@ -1,4 +1,4 @@
-package guiaAvl
+package avl
 
 import (
 	"fmt"
@@ -26,15 +26,15 @@ func (n *AVLNode[T]) string() string {
 	return fmt.Sprintf("%v", n.data)
 }
 
-func (n *AVLNode[T]) getLeft() *AVLNode[T] {
+func (n *AVLNode[T]) GetLeft() *AVLNode[T] {
 	return n.left
 }
 
-func (n *AVLNode[T]) getRight() *AVLNode[T] {
+func (n *AVLNode[T]) GetRight() *AVLNode[T] {
 	return n.right
 }
 
-func (n *AVLNode[T]) getHeight() int {
+func (n *AVLNode[T]) GetHeight() int {
 	if n == nil {
 		return -1
 	}
@@ -42,16 +42,16 @@ func (n *AVLNode[T]) getHeight() int {
 	return n.height
 }
 
-func (n *AVLNode[T]) getBalance() int {
+func (n *AVLNode[T]) GetBalance() int {
 	if n == nil {
 		return 0
 	}
 
-	return n.left.getHeight() - n.right.getHeight()
+	return n.left.GetHeight() - n.right.GetHeight()
 }
 
 func (n *AVLNode[T]) updateHeight() {
-	n.height = 1 + utils.Max(n.left.getHeight(), n.right.getHeight())
+	n.height = 1 + utils.Max(n.left.GetHeight(), n.right.GetHeight())
 }
 
 func (n *AVLNode[T]) insert(value T) *AVLNode[T] {
@@ -125,10 +125,10 @@ func (n *AVLNode[T]) remove(value T) *AVLNode[T] {
 }
 
 func (n *AVLNode[T]) applyRotation() *AVLNode[T] {
-	balance := n.getBalance()
+	balance := n.GetBalance()
 
 	if balance > 1 {
-		if n.left.getBalance() < 0 {
+		if n.left.GetBalance() < 0 {
 			n.left = n.left.rotateLeft()
 		}
 
@@ -136,7 +136,7 @@ func (n *AVLNode[T]) applyRotation() *AVLNode[T] {
 	}
 
 	if balance < -1 {
-		if n.right.getBalance() > 0 {
+		if n.right.GetBalance() > 0 {
 			n.right = n.right.rotateRight()
 		}
 

@@ -1,4 +1,4 @@
-package guiaAvl
+package ejercicios_avl
 
 import (
 	"github.com/untref-ayp2/data-structures/types"

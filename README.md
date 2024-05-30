@@ -11,7 +11,7 @@ En lápiz y papel dibujar cada paso. Crear un árbol AVL vacío e insertar: 100,
 Dado el siguiente árbol AVL, borrar los nodos: 60, 55, 50, 40, 70, 20. Indicar los pasos y las
 rotaciones realizadas, en caso de que sean necesarias.
 
-![](avl.png)
+![](images/avl.png)
 
 ### Ejercicio 4
 Escribir un iterador PreOrder.

@@ -1,4 +1,4 @@
-package guiaAvl
+package avl
 
 import (
 	"errors"
@@ -59,11 +59,11 @@ func (avl *AVLTree[T]) FindMax() (T, error) {
 }
 
 func (avl *AVLTree[T]) GetHeight() int {
-	return avl.root.getHeight()
+	return avl.root.GetHeight()
 }
 
 func (avl *AVLTree[T]) GetBalance() int {
-	return avl.root.getBalance()
+	return avl.root.GetBalance()
 }
 
 func (avl *AVLTree[T]) IsEmpty() bool {
